@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="liangtong20170928.bawei.com.dshang.activity.Reg_Login_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_return3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_browser_nav_back"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帮助"
+            android:textSize="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/taobao"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/bt_login2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="登录"
+        android:background="#FF8400"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/bt_reg2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:text="新用户注册"
+        />
+
+
+</LinearLayout>

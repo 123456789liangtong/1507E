@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_line"
+        ></FrameLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#DCDBDB"
+        android:layout_above="@+id/rl_bottom"/>
+
+    <RadioGroup
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#F2F2F2"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/tv_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_home"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="首页"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/tv_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_class"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="分类"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_cart"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="购物车"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/tv_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_user"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="个人中心"
+            android:button="@null"
+            />
+    </RadioGroup>
+
+</RelativeLayout>

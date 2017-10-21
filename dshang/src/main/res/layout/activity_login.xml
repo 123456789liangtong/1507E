@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="liangtong20170928.bawei.com.dshang.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/nav"
+        >
+        <ImageView
+            android:id="@+id/iv_return2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_action_back"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户登录"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/taobao"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        <EditText
+            android:id="@+id/et_name_login"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入账号"
+            android:layout_gravity="center_horizontal"
+            />
+        <EditText
+            android:id="@+id/et_pwd_login"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:background="@color/nav"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/tv_zhuce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册账号"
+            android:layout_weight="9"
+            android:textColor="@color/nav"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:layout_weight="1"
+            android:textColor="@color/nav"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20">
+
+    </LinearLayout>
+</LinearLayout>
