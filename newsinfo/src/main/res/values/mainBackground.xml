@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <attr name="mainBackground" format="color"></attr>
+      <attr name="textcont" format="string"></attr>
+
+</resources>

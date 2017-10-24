@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">新闻头条</string>
+    <string name="openDrawer">今日头条</string>
+    <string name="closeDrawer">用户登录</string>
+    <string name="ri">日间模式</string>
+    <string name="ye">夜间模式</string>
+</resources>
