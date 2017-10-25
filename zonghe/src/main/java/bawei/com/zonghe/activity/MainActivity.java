@@ -1,4 +1,4 @@
-package bawei.com.zonghe;
+package bawei.com.zonghe.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,10 +10,12 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import bawei.com.zonghe.adapter.MyFragmentAdapter;
+import bawei.com.zonghe.R;
+import bawei.com.zonghe.adapter.MyNewAdapter;
 import bawei.com.zonghe.fragment.Fragment01;
 import bawei.com.zonghe.fragment.Fragment02;
 import bawei.com.zonghe.fragment.Fragment03;
+import bawei.com.zonghe.fragment.Fragment04;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private String[] title = new String[]{"最新日报","专栏","热门","主题日报"};
@@ -47,8 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragments.add(new Fragment01());
         fragments.add(new Fragment02());
         fragments.add(new Fragment03());
+        fragments.add(new Fragment04());
 
-        MyFragmentAdapter adapter = new MyFragmentAdapter(getSupportFragmentManager(),title,fragments);
+        MyNewAdapter adapter = new MyNewAdapter(getSupportFragmentManager(),title,fragments);
         //把集合放入适配器
         adapter.setFragments(fragments);
         //给ViewPager设置适配器
@@ -58,7 +61,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //使tablayout和viewPager关联
         tabLayout.setupWithViewPager(vp);
-
-
     }
 }

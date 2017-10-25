@@ -21,7 +21,7 @@ import java.util.List;
 import bawei.com.zonghe.R;
 import bawei.com.zonghe.adapter.MyAdapter;
 import bawei.com.zonghe.adapter.RecyclerViewAdapter;
-import bawei.com.zonghe.bean.ZuixinBean;
+import bawei.com.zonghe.bean.NewBean;
 import bawei.com.zonghe.utils.OkHttp3Utils;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -35,7 +35,7 @@ public class Fragment01 extends Fragment {
 
     private PullLoadMoreRecyclerView recycler;
     private int page=1;
-    private List<ZuixinBean.StoriesBean> list2;
+    private List<NewBean.StoriesBean> list2;
     private Handler handler2 = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -44,13 +44,14 @@ public class Fragment01 extends Fragment {
                 case 0:
                     String obj = (String) msg.obj;
                     Gson gson = new Gson();
-                    ZuixinBean bean = gson.fromJson(obj, ZuixinBean.class);
-                    List<ZuixinBean.StoriesBean> data = bean.getStories();
+                    NewBean bean = gson.fromJson(obj, NewBean.class);
+                    List<NewBean.StoriesBean> data = bean.getStories();
                     if(page == 1){
                         list2 = new ArrayList<>();
                     }
                     for(int i = 0; i<data.size();i++){
                         list2.add(data.get(i));
+                        //list2.add(data.get(i));
                     }
                     //绑定数据
                     dataAdapter(list2);
@@ -82,10 +83,11 @@ public class Fragment01 extends Fragment {
         viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         recycler = view.findViewById(R.id.recycler);
 
+        recycler =view.findViewById(R.id.recycler);
         recycler.setLinearLayout();
         recycler.setPullRefreshEnable(true);
         recycler.setPushRefreshEnable(true);
-        recycler =view.findViewById(R.id.recycler);
+
         initData();
         recycler.setOnPullLoadMoreListener(new PullLoadMoreRecyclerView.PullLoadMoreListener() {
             @Override
@@ -143,7 +145,7 @@ public class Fragment01 extends Fragment {
 
     }
 
-    private void dataAdapter(List<ZuixinBean.StoriesBean> list2){
+    private void dataAdapter(List<NewBean.StoriesBean> list2){
         RecyclerViewAdapter adapter = null;
         if(adapter == null){
             adapter = new RecyclerViewAdapter(list2,getActivity());

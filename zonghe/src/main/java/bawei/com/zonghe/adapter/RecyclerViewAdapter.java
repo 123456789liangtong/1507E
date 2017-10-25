@@ -14,7 +14,7 @@ import java.util.List;
 
 import bawei.com.zonghe.MyApplication;
 import bawei.com.zonghe.R;
-import bawei.com.zonghe.bean.ZuixinBean;
+import bawei.com.zonghe.bean.NewBean;
 
 /**
  * Created by la on 2017/10/22.
@@ -22,17 +22,18 @@ import bawei.com.zonghe.bean.ZuixinBean;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private List<ZuixinBean.StoriesBean> data;
+    private List<NewBean.StoriesBean> data;
     private Context context;
+    private String s;
 
-    public RecyclerViewAdapter(List<ZuixinBean.StoriesBean> data, Context context) {
+    public RecyclerViewAdapter(List<NewBean.StoriesBean> data, Context context) {
         this.data = data;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recycler_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.rv_new_item, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
 
@@ -42,7 +43,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(data.get(position).getTitle());
-        ImageLoader.getInstance().displayImage(data.get(position).getImages().get(position),holder.img, MyApplication.options());
+        List<String> images = data.get(position).getImages();
+        for (int a = 0; a<images.size();a++){
+            s = images.get(a);
+        }
+        ImageLoader.getInstance().displayImage(s,holder.img, MyApplication.options());
     }
 
     @Override

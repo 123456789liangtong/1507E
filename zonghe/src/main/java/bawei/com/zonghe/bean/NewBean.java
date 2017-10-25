@@ -6,7 +6,7 @@ import java.util.List;
  * Created by la on 2017/10/25.
  */
 
-public class ZuixinBean {
+public class NewBean {
 
     /**
      * date : 20171025
